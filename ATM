@@ -1,0 +1,43 @@
+username = 'Cherry'
+password = 'Cherry@145'
+
+c_name = input("Enter your name: ")
+c_pass = input("Enter your password: ")
+
+if c_name == username and c_pass == password:
+    amount = 500
+    minbalance=100
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Mini statement")
+    print("4. Exit")
+
+    option = int(input("Select your option: "))
+
+    if option == 1:
+        dep = int(input("Enter your amount: "))
+        amount += dep
+        print("Total amount:", amount)
+
+    elif option == 2:
+        withd = int(input("Enter your amount: "))
+        amount -= withd
+        if(amount>=minbalance):
+            print("Total amount:", amount)
+        else:
+            print("Insufficient Balance")
+
+    elif option == 3:
+        print("========= ATM =========")
+        print("Username:", username)
+        print("Total amount:", amount)
+        print("Thanks for visiting")
+
+    elif option == 4:
+        exit()
+
+    else:
+        print("Please enter correct login")
+
+else:
+    print("Please enter correct login credentials")
